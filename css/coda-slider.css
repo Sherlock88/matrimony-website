@@ -37,11 +37,12 @@
 }
 
 #menu {
-	float: right;
-	width: 560px;
+	float: left;
+	display: block;
+	width: 784px;
 	height: 40px;
 	margin-top: 70px;
-	background: url(../images/tooplate_menu.png) no-repeat
+	background: url(../images/tooplate_menu2.png)no-repeat;
 }
 
 #content {
@@ -96,7 +97,7 @@
 .scroll {
     height: 470px;
     width: 780px;
-    overflow: auto;
+    overflow: hidden;
     /* overflow-x: hidden; */
     position: relative;
     clear: left;
@@ -117,7 +118,7 @@ ul.navigation {
 
 ul.navigation li {
     display: inline;
-    margin: 0;
+    margin: 12px;
 	padding: 0;
 }
 
