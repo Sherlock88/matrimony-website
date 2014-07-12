@@ -5,7 +5,7 @@
 <title>Welcome to B &amp; AJ Matrimony Portal</title>
 <meta name="keywords" content="matrimony, matchmaking, marriage, B & AJ" />
 <meta name="description" content="B &amp; AJ Matrimony pioneered the concept of online matrimony service." />
-<link href="tooplate_style.css" rel="stylesheet" type="text/css" />
+<link href="css/tooplate_style.css" rel="stylesheet" type="text/css" />
 
 <link rel="stylesheet" href="css/coda-slider.css" type="text/css" charset="utf-8" />
 
@@ -15,10 +15,49 @@
 <script src="js/jquery.serialScroll-1.2.1.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/coda-slider.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery-latest.pack.js"></script>
+<script>
+$(document).ready(function() {	
+	$(function() {	
+		var WindowHeight = $(window).height();
+		var WindowWidth = $(window).width();
+		$('#dark').css({'width':WindowWidth,'height':WindowHeight});
+		$('#dark').fadeTo(2000,0.75);
+		$('#message').css('top',  WindowHeight/2-$('#message').height()/2);
+		$('#message').css('left', WindowWidth/2-$('#message').width()/2);	
+		$('#message').fadeIn(2000); 	
+	});	
+		$('.close').click(function() {
+		$('#dark').fadeOut();
+		$('#message').fadeOut();
+	});		
+		$('#dark').click(function () {
+		$('#dark').fadeOut();
+		$('#message').fadeOut();
+	});			
+});
+</script>
+
+<style>
+#dark 			{display: none; background-color:#000; position:absolute; left:0; top:0; z-index:100;}
+#message 		{display:none; position:absolute; left:0; top:0; z-index:101; width:350px; height:250px; background-color:#CBFBCC; border:1px solid #333; -moz-border-radius: 20px; -webkit-border-radius : 20px; padding: 20px; color: #666666;}
+</style>
 
 </head>
+
 <body>
-	
+
+<div id="message">
+	<a href="#"class="close"/><img src="images/accept.png" align="right" /></a>
+    <p><img src="images/banner.jpg" width="222" height="41" /> 
+    <p><b>B & AJ is proudly informs all their visitors that the site has made 1,000,000th match last Thursday</b>.</p> 
+    <p>A huge thanks to all those happy couples who has found the <b>king or queen</b> of their hearts here at B & AJ.</p>
+    <p>We will do our best to deliver our services  better in future.</p>
+    <p><b>Once again, thanks to all!</b></p>
+    <p align="right">The B & AJ Match-Making Team</p>
+</div>
+<div id="dark"></div>
+
 <div id="slider">
    	<div id="tooplate_wrapper">   
             <div id="menu">
